@@ -54,7 +54,5 @@ for (u in run.scenarios){
   }
 }
 
-out2 <- analysis2_IA[, c("scenario", "mut.rate", "Nevs", "N.interims", "dat1", "dat2", "OR.CR", "CR gate", "OS gate", "power (no Fut)", 
-                     "power (consider Fut)", "P(correct stop under H0)", "P(wrong stop under H1)")]
-out2
+analysis2_IA
 

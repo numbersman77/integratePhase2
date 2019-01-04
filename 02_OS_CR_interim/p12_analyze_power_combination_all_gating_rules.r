@@ -99,10 +99,3 @@ out3 <- analysis3[, c("scenario", "mut.rate", "N.interims", "power (no Fut)", "p
 out3[, c("power (no Fut)", "power (consider Fut)", "conditional power", "P(correct stop under H0)", "P(wrong stop under H1)")] <- apply(out3[, c("power (no Fut)", "power (consider Fut)", "conditional power", "P(correct stop under H0)", "P(wrong stop under H1)")], 1:2, function(x){round(100 * x, 1)})
 out3
 
-
-plot(density(sim.in$hr1.os.int[survive.interim]))
-
-
-
-
-#

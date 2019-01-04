@@ -1,5 +1,5 @@
 #--------------------------------------------------------------------------------------------------------------------------------------
-# simulations with EFS / interim analysis   
+# run simulations 
 #--------------------------------------------------------------------------------------------------------------------------------------
 
 set.seed(1111)
@@ -19,7 +19,7 @@ for (u in run.scenarios){
   if (sum(recruit.u) < Npt){recruit.u[length(recruit.u)] <- recruit.u[length(recruit.u)] + (Npt - sum(recruit.u))}
   if (sum(recruit.u) > Npt){recruit.u[length(recruit.u)] <- recruit.u[length(recruit.u)] - (Npt - sum(recruit.u))}
   
-  # generate OS and EFS data
+  # generate OS data
   GenData0 <- generateData(p0 = scen.u["p1.cr"], p1.corr = scen.u["p1.cr"], HR.OS = 1, mut.rate = scen.u["mut.rate"], 
                            prob.longterm = p.long.term, med.nonresp.H0 = med.nonresp.H0, med.resp.shortterm.H0 = med.resp.shortterm.H0, 
                            long.surv = long.surv, n = n)    

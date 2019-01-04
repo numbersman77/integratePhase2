@@ -76,20 +76,9 @@ for (u in run.scenarios){
   iter <- iter + 1
 }
 
-
-# difference in KM estimates
-sum(d_OS <= -0.05) / length(d_OS)
-sum(d_OS <= -0.1) / length(d_OS)
-sum(d_OS <= -0.15) / length(d_OS)
-
 analysis1_IA
 
 
-out1 <- analysis1_IA[, c("scenario", "mut.rate", "Npts", "Nevs", "N.interims", "dat1", "dat2", "OR.CR", "power (no Fut)", "time to interim (median)", "trial duration (min)", 
-                      "trial duration (median)", "trial duration (max)", "OS 30d trt - ctrl (median)", 
-                      "OS 30d trt - ctrl (10% quantile)", "OS 30d trt - ctrl (90% quantile)", "OS HR final (median)", "HR OS CR (median)", "HR OS non-CR (median)")]
-out1
 
-out1 <- analysis1_IA[, c("scenario", "Npts", "Nevs", "N.interims", "dat1", "dat2", "alpha", "power (no Fut)", "OS HR final (median)", 
-                      "n of OS events (interim)", "median OS FU (interim)")]
-out1
+
+

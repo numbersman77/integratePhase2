@@ -9,12 +9,9 @@ generateData <- function(p0 = prob.CR, p1.corr = p1.corr, HR.OS = 0.72, mut.rate
      # CR status: 0 = CR, 1 = non-CR
      CR.status <- c(sample(c(0, 1), N.nonmut, prob = c(p1.corr, (1 - p1.corr)), replace = TRUE), sample(c(0, 1), N.mut, prob = c(p0, 1 - p0), replace = TRUE))
     
-     # 50%/50% chance to be short term versus long term survivor 
-     # (based on 40% transplant and 10% long-term without transplant)
-     # generated for all patients, but only used for CRs (ease of computation)
+     # longterm survivor yes or no
      longterm <- rbinom(n, size = 1, prob = prob.longterm)  
-     #test: 1 - mean(CR.status) #should be approx 21.7
-       
+
      # generate output:
      dat <- matrix(NA, nrow = n, ncol = 3)
      colnames(dat) <- c("CR.status OS", "mut.status", "CR.status")
